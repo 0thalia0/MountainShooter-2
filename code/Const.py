@@ -1,0 +1,7 @@
+#c
+COLOR_ORANGE = (255,128, 0)
+
+
+#w
+WIN_WIDTH = 573
+WIN_HEIGHT = 324
