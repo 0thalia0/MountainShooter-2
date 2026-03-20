@@ -1,6 +1,6 @@
 #c
 COLOR_ORANGE = (255,128, 0)
-
+COLOR_WHITE = (255, 255, 255)
 
 #w
 WIN_WIDTH = 573

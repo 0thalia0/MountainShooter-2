@@ -22,8 +22,8 @@ class Menu:
         pygame.mixer_music.play(-1)
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
-            self.menu_text(text_size: 50, text: "Mountain", COLOR_ORANGE, text_center_pos:((WIN_WIDTH /2) ,70))
-            self.menu_text(text_size: 50, text: "Shooter", COLOR_ORANGE, text_center_pos:((WIN_WIDTH / 2), 120))
+            self.menu_text(text_size= 50, text_color=COLOR_ORANGE, text="Mountain",  text_center_pos=((WIN_WIDTH /2) ,70))
+            self.menu_text(text_size= 50, text_color=COLOR_ORANGE, text= "Shooter", text_center_pos=((WIN_WIDTH / 2), 120))
             pygame.display.flip()
 
             # check for all events
@@ -33,9 +33,8 @@ class Menu:
                   pygame.quit()#close window
                   quit() # end pygame
 
-    def menu_text(self, text_size: int, text: str, text_color: tuple, text_center_pos: tuple, text_surf=None,
-                  antialias=None):
+    def menu_text(self, text_size: int, text: str, text_color: tuple, text_center_pos: tuple):
         text_font: Font = pygame.font.SysFont('Comic Sans MS', text_size)
-        text_surf: Surface = text_font.render(text, antialias: var = True, text_color).convert_alpha()
+        text_surf: Surface = text_font.render(text, True, text_color).convert_alpha()
         text_rect: Rect = text_surf.get_rect(center=text_center_pos)
         self.window.blit(source=text_surf, dest=text_rect)
