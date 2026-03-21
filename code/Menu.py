@@ -4,7 +4,7 @@ import pygame.image
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.Const import WIN_WIDTH,COLOR_ORANGE
+from code.Const import WIN_WIDTH,COLOR_ORANGE,COLOR_WHITE,MENU_OPTION
 
 
 def convert_alpha():
@@ -24,6 +24,10 @@ class Menu:
             self.window.blit(source=self.surf, dest=self.rect)
             self.menu_text(text_size= 50, text_color=COLOR_ORANGE, text="Mountain",  text_center_pos=((WIN_WIDTH /2) ,70))
             self.menu_text(text_size= 50, text_color=COLOR_ORANGE, text= "Shooter", text_center_pos=((WIN_WIDTH / 2), 120))
+
+            for i in range(len(MENU_OPTION)):
+                self.menu_text(text_size=20, text=MENU_OPTION[i], text_color=COLOR_WHITE, text_center_pos=((WIN_WIDTH /2) ,200 + 25 * i))
+
             pygame.display.flip()
 
             # check for all events
