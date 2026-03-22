@@ -10,7 +10,7 @@ class Level:
         self.window = window
         self.nama= name
         self.game_mode = game_mode
-        self.entity_list = list[Entity] = []
+        self.entity_list: list[Entity] = []
 
     def run(self, ):
         pass
