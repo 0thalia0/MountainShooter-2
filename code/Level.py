@@ -7,7 +7,7 @@ import pygame
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.Const import WIN_HEIGHT, COLOR_WHITE
+from code.Const import WIN_HEIGHT, COLOR_WHITE, MENU_OPTION
 from code.entityFactory import EntityFactory
 
 
@@ -20,6 +20,9 @@ class Level:
         self.entity_list: list[Entity] = []
         self.entity_list.extend(EntityFactory.get_entity('Level1Bg'))
         self.entity_list.append(EntityFactory.get_entity('Player1'))
+        if game_mode in [MENU_OPTION[1], MENU_OPTION[2]]:
+            self.entity_list.append(EntityFactory.get_entity('Player2'))
+
 
     def run(self, ):
         pygame.mixer_music.load(f'asset/{self.name}.mp3')
