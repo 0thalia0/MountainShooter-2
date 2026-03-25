@@ -1,3 +1,7 @@
+import sys
+import os
+import pygame
+
 #c
 import pygame
 

@@ -1,6 +1,10 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import sys
+import os
+import pygame
+
+import sys
 from xml.dom.minidom import Entity
 
 import pygame

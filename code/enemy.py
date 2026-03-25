@@ -1,5 +1,9 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+import sys
+import os
+import pygame
+
 from code.Const import ENTITY_SPEED, WIN_WIDTH
 from code.Entity import Entity
 
